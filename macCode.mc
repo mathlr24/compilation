@@ -1,6 +1,6 @@
 Menu : MaxiBestOF {
 
-    Sandwich = big mac
+    sandwich = big mac
     accompagnement = frites
     boisson = ice Tea
 
@@ -17,11 +17,12 @@ options : accompagnement {
 }
 
 options : burger {
+
     sandwich  = big tasty
+    
 }
 
 options : boisson {
     boisson = coca
 }
 
-options : 
