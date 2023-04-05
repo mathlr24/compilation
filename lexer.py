@@ -3,43 +3,33 @@ import sys
 from optparse import OptionParser
 
 regexExpressions = [
+
+    #Draw
+    (r'1.2-1.2','DRAW'),
+
+    #Number 
+    (r"-?\d+", "MOVE"),
+
+    #Chess pieces
+    (r"[a-zA-Z]+", "CHESS PIECE"),
+
+    #Victory
+    (r'[\#+\d+\-+\d]','VICTORY'),
+
     # Whitespace
     (r'[ \n\t]+', None),
 
-    # Comment
-    (r"\#", "COMMENT"),
+    #Tiret
+    (r'\-', 'Tiret'),
 
-    # Keywords
-    (r'Menu', 'MENU'),
-    (r'MaxiBestOF', 'MAXI BEST OF'),
-    (r'Options', 'OPTIONS'),
-    (r'output', 'OUTPUT'),
-    (r'end', 'END'),
+    #Dot 
+    (r'\.',None),
 
-    # Foods
-    (r'sandwich', 'SANDWICH'),
-    (r'accompaniment', 'ACCOMPANIEMENT'),
-    (r'boisson', 'DRINK'),
-    (r'assaisonnement', 'SEASONING'),
-    (r'sauce 1', 'SAUSAGE'),
-    (r'supplement', 'SUPPLEMENT'),
-    (r'dessert', 'DESSERT'),
-    (r'burger', 'BURGER'),
-    (r'beverage', 'BEVERAGE'),
+    #Plus
+    (r'\+','Plus'),
 
-    (r'\=', 'ASSIGN'),
-    (r'\,', 'COMMA'),
-    (r'\{', 'OPENING BRACE'),
-    (r'\}', 'CLOSING BRACE'),
-    (r'\:', 'DEFINITION'),
+    #
 
-
-    (r'or', 'OR'),
-    (r'xor', 'XOR'),
-    (r'and', 'AND'),
-
-    (r"[a-z]\w*", "IDENTIFIER"),
-    (r"-?\d+", "INT_NUMBER"),
 ]
 
 
