@@ -7,6 +7,17 @@ regexExpressions = [
     #Draw
     (r'1.2-1.2','DRAW'),
 
+    #Informations
+    (r'Event', 'EVENT'),
+    (r'Location','LOCATION'),
+    (r'Date', 'DATE'),
+    (r'Round', 'ROUND'),
+    (r'White', 'WHITE'),
+    (r'Black','BLACK'),
+    (r'\"+\d+\"','NUMBER ROUND'),
+    (r'\"\d+.+"','NUMBER DATE'),
+    (r'\"+.+\"', 'TEXTE'),
+
     #Number 
     (r"-?\d+", "MOVE"),
 
@@ -29,6 +40,12 @@ regexExpressions = [
     (r'\+','Plus'),
 
     #
+    (r'\[', 'OPENING SQUARE_BRACKET'),
+    (r'\]', 'CLOSING SQUARE_BRACKET'),
+    (r'\"', 'QUOTATION MARK'),
+    (r'\/', 'Slash'),
+
+    
 
 ]
 
